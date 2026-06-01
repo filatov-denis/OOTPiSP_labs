@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OOTPiSP_labs.iml" filepath="$PROJECT_DIR$/OOTPiSP_labs.iml" />
       <module fileurl="file://$PROJECT_DIR$/lab_1/lab_1.iml" filepath="$PROJECT_DIR$/lab_1/lab_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab_2/lab_2.iml" filepath="$PROJECT_DIR$/lab_2/lab_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab_3/lab_3.iml" filepath="$PROJECT_DIR$/lab_3/lab_3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab_4/lab_4.iml" filepath="$PROJECT_DIR$/lab_4/lab_4.iml" />
     </modules>
   </component>
 </project>
