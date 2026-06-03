@@ -22,9 +22,9 @@ public final class Registry {
 
     private static <V extends Vehicle> List<Field<V>> common() {
         return List.of(
-            Field.str("name", v -> v.name, (v, s) -> v.name = s),
-            Field.i("year", v -> v.year, (v, n) -> v.year = n),
-            Field.i("maxSpeed", v -> v.maxSpeed, (v, n) -> v.maxSpeed = n)
+                Field.str("name", Vehicle::getName, Vehicle::setName),
+                Field.i("year", Vehicle::getYear, Vehicle::setYear),
+                Field.i("maxSpeed", Vehicle::getMaxSpeed, Vehicle::setMaxSpeed)
         );
     }
 
@@ -37,23 +37,23 @@ public final class Registry {
     public static Registry defaults() {
         Registry r = new Registry();
         r.register(Car.class, new VehicleKind<>("Car", Car::new, combine(List.of(
-            Field.i("doors", v -> v.doors, (v, n) -> v.doors = n),
-            Field.str("fuel", v -> v.fuel, (v, s) -> v.fuel = s)
+                Field.i("doors", Car::getDoors, Car::setDoors),
+                Field.str("fuel", Car::getFuel, Car::setFuel)
         ))));
         r.register(Truck.class, new VehicleKind<>("Truck", Truck::new, combine(List.of(
-            Field.i("cargoTons", v -> v.cargoTons, (v, n) -> v.cargoTons = n)
+                Field.i("cargoTons", Truck::getCargoTons, Truck::setCargoTons)
         ))));
         r.register(Motorcycle.class, new VehicleKind<>("Motorcycle", Motorcycle::new, combine(List.of(
-            Field.i("engineCc", v -> v.engineCc, (v, n) -> v.engineCc = n)
+                Field.i("engineCc", Motorcycle::getEngineCc, Motorcycle::setEngineCc)
         ))));
         r.register(Bus.class, new VehicleKind<>("Bus", Bus::new, combine(List.of(
-            Field.i("passengers", v -> v.passengers, (v, n) -> v.passengers = n)
+                Field.i("passengers", Bus::getPassengers, Bus::setPassengers)
         ))));
         r.register(Bicycle.class, new VehicleKind<>("Bicycle", Bicycle::new, combine(List.of(
-            Field.i("gears", v -> v.gears, (v, n) -> v.gears = n)
+                Field.i("gears", Bicycle::getGears, Bicycle::setGears)
         ))));
         r.register(Boat.class, new VehicleKind<>("Boat", Boat::new, combine(List.of(
-            Field.d("lengthM", v -> v.lengthM, (v, x) -> v.lengthM = x)
+                Field.d("lengthM", Boat::getLengthM, Boat::setLengthM)
         ))));
         return r;
     }

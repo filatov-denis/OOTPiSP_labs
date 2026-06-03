@@ -1,2 +1,21 @@
 package vehicles;
-public final class Car extends Vehicle { public int doors; public String fuel = ""; }
+public final class Car extends Vehicle {
+    private int doors;
+    private String fuel = "";
+
+    public int getDoors() {
+        return doors;
+    }
+
+    public void setDoors(int doors) {
+        this.doors = doors;
+    }
+
+    public String getFuel() {
+        return fuel;
+    }
+
+    public void setFuel(String fuel) {
+        this.fuel = fuel;
+    }
+}

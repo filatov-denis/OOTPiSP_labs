@@ -22,7 +22,7 @@ public final class MainFrame extends JFrame {
         setLayout(new BorderLayout());
 
         list.setCellRenderer((l, v, i, sel, foc) -> {
-            JLabel lbl = new JLabel(reg.of(v).name() + ": " + v.name);
+            JLabel lbl = new JLabel(reg.of(v).name() + ": " + v.getName());
             if (sel) { lbl.setOpaque(true); lbl.setBackground(l.getSelectionBackground()); lbl.setForeground(l.getSelectionForeground()); }
             return lbl;
         });

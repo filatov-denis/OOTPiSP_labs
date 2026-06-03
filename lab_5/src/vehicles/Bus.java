@@ -1,2 +1,13 @@
 package vehicles;
-public final class Bus extends Vehicle { public int passengers; }
+
+public final class Bus extends Vehicle {
+    private int passengers;
+
+    public int getPassengers() {
+        return passengers;
+    }
+
+    public void setPassengers(int passengers) {
+        this.passengers = passengers;
+    }
+}
