@@ -18,4 +18,8 @@ public final class Car extends Vehicle {
     public void setFuel(String fuel) {
         this.fuel = fuel;
     }
+
+    public String getData() {
+        return super.getData() + ", Doors: " + doors + ", Fuel: " + fuel;
+    }
 }

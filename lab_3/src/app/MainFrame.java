@@ -21,13 +21,15 @@ public final class MainFrame extends JFrame {
         setSize(640, 480);
         setLayout(new BorderLayout());
 
+        //Show existing data
         list.setCellRenderer((l, v, i, sel, foc) -> {
-            JLabel lbl = new JLabel(reg.of(v).name() + ": " + v.getName());
+            JLabel lbl = new JLabel(reg.of(v).name() + ": " + v.getData());
             if (sel) { lbl.setOpaque(true); lbl.setBackground(l.getSelectionBackground()); lbl.setForeground(l.getSelectionForeground()); }
             return lbl;
         });
         add(new JScrollPane(list), BorderLayout.CENTER);
 
+        //Show menu items
         JMenuBar bar = new JMenuBar();
         JMenu addMenu = new JMenu("Add");
         for (VehicleKind<?> k : reg.kinds()) {

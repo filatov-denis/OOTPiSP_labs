@@ -9,4 +9,8 @@ public final class Bicycle extends Vehicle {
     public void setGears(int gears) {
         this.gears = gears;
     }
+
+    public String getData() {
+        return super.getData() + ", Gears: " + gears;
+    }
 }

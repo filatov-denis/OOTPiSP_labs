@@ -9,4 +9,8 @@ public final class Motorcycle extends Vehicle {
     public void setEngineCc(int engineCc) {
         this.engineCc = engineCc;
     }
+
+    public String getData() {
+        return super.getData() + ", Engine: " + engineCc;
+    }
 }

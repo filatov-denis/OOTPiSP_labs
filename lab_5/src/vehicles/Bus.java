@@ -10,4 +10,8 @@ public final class Bus extends Vehicle {
     public void setPassengers(int passengers) {
         this.passengers = passengers;
     }
+
+    public String getData() {
+        return super.getData() + ", Passengers: " + passengers;
+    }
 }

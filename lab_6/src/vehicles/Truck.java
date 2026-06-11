@@ -9,4 +9,8 @@ public final class Truck extends Vehicle {
     public void setCargoTons(int cargoTons) {
         this.cargoTons = cargoTons;
     }
+
+    public String getData() {
+        return super.getData() + ", Cargo tons: " + cargoTons;
+    }
 }

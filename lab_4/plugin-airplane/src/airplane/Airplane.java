@@ -21,4 +21,8 @@ public final class Airplane extends Vehicle {
     public void setSeats(int seats) {
         this.seats = seats;
     }
+
+    public String getData() {
+        return super.getData() + ", Wingspan: " + wingspanM + ", Seats: " + seats;
+    }
 }

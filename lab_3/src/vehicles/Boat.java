@@ -9,4 +9,8 @@ public final class Boat extends Vehicle {
     public void setLengthM(double lengthM) {
         this.lengthM = lengthM;
     }
+
+    public String getData() {
+        return super.getData() + ", Length: " + lengthM;
+    }
 }

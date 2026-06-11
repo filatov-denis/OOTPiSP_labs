@@ -11,6 +11,7 @@ public final class Registry {
     private final Map<String, VehicleKind<?>> byName = new LinkedHashMap<>();
     private final Map<Class<? extends Vehicle>, VehicleKind<?>> byClass = new LinkedHashMap<>();
 
+    //Register vehicle types in program
     public <V extends Vehicle> void register(Class<V> cls, VehicleKind<V> kind) {
         byName.put(kind.name(), kind);
         byClass.put(cls, kind);
@@ -34,6 +35,7 @@ public final class Registry {
         return List.copyOf(all);
     }
 
+    //Register default vehicle types in program
     public static Registry defaults() {
         Registry r = new Registry();
         r.register(Car.class, new VehicleKind<>("Car", Car::new, combine(List.of(

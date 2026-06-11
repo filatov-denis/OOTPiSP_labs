@@ -28,4 +28,8 @@ public abstract class Vehicle {
     public void setMaxSpeed(int maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
+
+    public String getData() {
+        return "Name: " + name + ", Year: " + year + ", Max speed: " + maxSpeed;
+    }
 }

@@ -24,6 +24,7 @@ public final class ShapeRegistry {
     public static ShapeRegistry defaults() {
         ShapeRegistry r = new ShapeRegistry();
 
+        //Add draw options
         r.register(new ShapeKind<>("Line", Line::new, (g, s) -> g.drawLine(s.x0, s.y0, s.x1, s.y1)), Line.class);
         r.register(new ShapeKind<>("Rectangle", Rectangle::new, (g, s) -> g.drawRect(s.x0, s.y0, s.x1, s.y1)), Rectangle.class);
         r.register(new ShapeKind<>("Ellipse", Ellipse::new, (g, s) -> g.drawOval(s.x0, s.y0, s.x1, s.y1)), Ellipse.class);

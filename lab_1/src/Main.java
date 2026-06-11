@@ -15,7 +15,7 @@ public class Main {
         LIST.add(new Star(440, 100, 140, 140));
     }
 
-    static void main(String[] args) {
+    public static void main(String[] args) {
         JFrame f = new JFrame("Lab 1 — Shapes");
         f.add(new JPanel() {
             protected void paintComponent(Graphics g) {
